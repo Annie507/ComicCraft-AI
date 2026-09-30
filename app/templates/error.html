@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>ComicCraft - Error</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🎨 ComicCraft</h1>
+
+</header>
+
+
+<main>
+
+    <section class="error-box">
+
+        <h2>Something went wrong</h2>
+
+        <p>{{ error }}</p>
+
+        <a href="/" class="button">
+            ← Go Back
+        </a>
+
+    </section>
+
+</main>
+
+</body>
+
+</html>

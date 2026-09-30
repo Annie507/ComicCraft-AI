@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ComicCraft - Preview</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='style.css') }}">
+
+</head>
+
+
+<body>
+
+<header>
+
+    <h1>🎨 ComicCraft</h1>
+
+    <p>Your AI Comic</p>
+
+</header>
+
+
+<main>
+
+    <h2>Your Comic is Ready! 🎉</h2>
+
+
+    <section class="comic-grid">
+
+        {% for panel in layout %}
+
+        <article class="comic-panel">
+
+            <h3>
+                Panel {{ panel.panel_number }}
+            </h3>
+
+
+            <img
+                src="{{ panel.image_url }}"
+                alt="Comic Panel {{ panel.panel_number }}"
+            >
+
+
+            <h4>
+                {{ panel.title }}
+            </h4>
+
+
+            <p>
+                {{ panel.narration }}
+            </p>
+
+
+            <p>
+                <strong>Dialogue:</strong>
+                {{ panel.dialogue }}
+            </p>
+
+        </article>
+
+        {% endfor %}
+
+    </section>
+
+
+    <a href="/" class="button">
+        🔄 Create Another Comic
+    </a>
+
+</main>
+
+</body>
+
+</html>
